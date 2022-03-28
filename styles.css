@@ -4,6 +4,7 @@ body {
     background-color: #41386b;
     color: rgb(255, 255, 255);
     height: 100%;
+    font-family: 'Times New Roman', Times, serif;
 }
 .contentContainer {
     color:rgb(255, 255, 255);
@@ -35,9 +36,11 @@ body {
     background-color: white; 
 }
 .header, .footer {
+    display: flex;
     width: 100%;
-    text-align: center;
-    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    /* padding: 25px; */
     background-color: #0127239b;
     border: solid #42023a 2px;
     box-shadow: inset 0 0 100px rgba(3, 3, 3, 0.363), 0 0 50px rgba(240, 8, 8, 0.137);
@@ -46,10 +49,12 @@ body {
 .footer {
     position: absolute;
     bottom: 0;
+    height: 50px;
 }
 .header {
     font-size: 50px;
     font-weight: bolder;
+    height: 100px;
 }
 #pixContainer {
     display: flex;
