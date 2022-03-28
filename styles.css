@@ -61,13 +61,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
 }
 #colorpickerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
 }
 .left {
     display: flex;
