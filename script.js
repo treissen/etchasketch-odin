@@ -5,7 +5,8 @@ const canvas = document.querySelector('#sketchContainer');
 const userInput = document.getElementById("quantity");
 var pixel;
 let mode;
-let userColor = document.getElementById('userColor');
+let userColorSelection;
+
 
 const resetButton = document.querySelector('.reset');
 
@@ -60,14 +61,24 @@ function rainbow() {square.addEventListener("mouseover", function(event) {
   });
 }
 //color picker 
-let colorPicker = userColor;
+// document.getElementById("userColor").addEventListener("change", function() {
+//   document.body.style.backgroundColor = this.value;
+// });
 
-colorPicker.addEventListener("change", colorPickerColor(), false);
-
-function colorPickerColor(event) {square.addEventListener("mouseover", function(event) {
-    event.target.style.backgroundColor = event.target.value // right now this is set to the original value, need to look up how to change it when user changes color
+function changeColor() {
+  square.addEventListener("mouseover", function(event) {
+    event.target.style.backgroundColor = userColorSelection;
   });
 }
+const setColor = function() {
+  userColorSelection = this.value;
+  changeColor();
+};
+let colorPicker = document.getElementById('userColor');
+colorPicker.addEventListener('change', setColor);
+
+
+
 function black() {square.addEventListener("mouseover", function(event) {
     event.target.style.backgroundColor = 'black';
   });
